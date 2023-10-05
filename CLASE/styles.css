@@ -35,23 +35,23 @@ header ul{
   justify-content: center;
 }
 
-header ul li{
+li{
   font-family: sans-serif;
   display: inline-block;
   color: #fff;
   margin: 2% 8% 0 8%;
 }
 
-header ul li:hover{
+li:hover{
   cursor: pointer;
-  color: #5333ed;
+  color: #4a009e;
 }
 
 header{
-  background-color: #5333ed;
+  background-color: #4a009e;
 }
 
-section 
+article 
 {
   transform-style: preserve-3d;
   position: relative;
@@ -62,7 +62,7 @@ section
   color: #FFF;
 }
 
-section h1
+article h1
 {
   text-align: center;
   font-size: 4rem;
@@ -71,7 +71,7 @@ section h1
 
 .no-parallax 
 {
-  background-color: #5333ed;
+  background-color: #4a009e;
   z-index: 999;
 }
 
@@ -81,32 +81,37 @@ section h1
   font-size: 2rem;
 }
 
-.parallax::after 
-{
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateZ(-1px) scale(1.5);
-  background-size: 100%;
-  z-index: -1;
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.bg::after 
-{
-  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("./assets/photo.jpg");
-  background-size: cover;
+
+.parallax.bg {
+  height: 100vh;
+}
+
+.parallax h1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 4rem;
+  font-family: sans-serif;
+}
+
+.parallax.bg {
+  background-image: url("./assets/fondo.gif");
 }
 
 @media screen and (min-width: 768px) 
 {
-  section h1 
+  article h1 
   {
     font-size: 8rem;
   }
-  
+
   .parallax h1 
   {
     font-size: 4rem;
