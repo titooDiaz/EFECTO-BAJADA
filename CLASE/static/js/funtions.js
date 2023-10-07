@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function() {
     var header = document.querySelector('header');
-    var list = this.document.querySelectorAll("li")
+    var list = document.querySelectorAll('.headerA')
     var scrollPosition = window.scrollY;
     
     if (scrollPosition < 1) {
@@ -11,8 +11,8 @@ window.addEventListener('scroll', function() {
     };
     if (scrollPosition > 1) {
         header.style.backgroundColor = "white"
-        list.forEach(li => {
-            li.style.color = "black"
+        list.forEach(a => {
+            a.style.color = "black"
         });
     };
     console.log(scrollPosition)
