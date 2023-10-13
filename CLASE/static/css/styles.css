@@ -174,13 +174,11 @@ form{
 
 
 input::placeholder {
-  font-weight: bold;
   color: #474747;
 }
 input{
   color: #000;
-  font-weight: bold;
-  border: 2px solid #000;
+  border: 2px solid #c0c0c0;
   border-radius: 5px;
   font-size: 20px;
   padding: 10px 16px;
